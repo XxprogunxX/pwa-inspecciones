@@ -87,3 +87,18 @@ La validez de esta decisión arquitectónica se verificará mediante:
 1. **Semana 1:** Ejecución exitosa de la suite de verificación básica (`make verify` / `npm run verify` y `public-tests/check.sh`).
 2. **Semanas 2 a 4:** Incorporación progresiva y auditoría de Service Worker con Lighthouse PWA Check (puntuación > 90 en categoría PWA).
 3. **Semanas posteriores:** Pruebas automatizadas de corte de red (Network Emulation Offline en pruebas end-to-end) confirmando que la aplicación carga y permite registrar inspecciones sin conexión activa.
+## Contribución de Hernández Camacho Carlos Eduardo
+
+Se realizó el análisis comparativo de las alternativas de arquitectura
+consideradas para el proyecto, evaluando sus ventajas, costos, riesgos y
+viabilidad dentro del periodo académico de 14 semanas.
+
+La decisión adoptada fue utilizar una Progressive Web App (PWA) basada en
+Next.js, React y TypeScript, considerando especialmente la necesidad de
+trabajar con conectividad intermitente y mantener un pipeline de desarrollo
+y validación reproducible.
+
+También se identificaron como riesgos técnicos las diferencias de
+almacenamiento y comportamiento del caché entre navegadores, especialmente
+en dispositivos iOS/WebKit, por lo que se propone una estrategia de
+persistencia conservadora para las siguientes semanas.
